@@ -1,0 +1,406 @@
+<html lang="en">
+
+<head>
+  <title>Dashboard Green House</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- Material Kit CSS -->
+  <link href="assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <!-- Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://kit.fontawesome.com/19315eae55.js" crossorigin="anonymous"></script>
+
+  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/latest/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./stylee.css">
+
+  <!-- Include Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Include the moment.js library -->
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+
+
+
+</head>
+
+<body>
+  <div class="wrapper ">
+    <div class="sidebar" data-color="green" data-background-color="green">
+      <!--
+      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+      Tip 2: you can also add an image using data-image tag
+  -->
+      <div class="logo">
+        <img src="Untitled-1.png" alt="Smiley face" width="160" height="160" style="vertical-align:middle;margin:0px 56px">
+        <a href="#Custume by Sofiane And Asma" class="simple-text logo-mini">
+          IOT
+        </a>
+        <a href="#Custume by Sofiane And Asma" class="simple-text logo-normal">
+          Green House
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="#0">
+              <p style="color:white;">Dashboard</p>
+            </a>
+          </li>
+
+          <li style="text-align: left; margin-left: 20px;"><br></li>
+          <li style="text-align: left; margin-left: 20px;">&nbsp; &nbsp; &nbsp; &nbsp; IoT-Greenhouse is a dashboard that shows temperature and humidity of mini greenhouse in real-time with controlling in the pump, fan, and lamp . It has an automatic
+            and manual &nbsp;pump mode :</li>
+          <ol>
+            <li><strong>Mode Automatic :&nbsp;</strong> Soil sensor controle the pump according to the needs of the soil</li>
+            <li><strong>Mode Manual &nbsp; :&nbsp;</strong> We can control the pump from the website or the application</li>
+          </ol>
+          <!-- your sidebar here -->
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="#AII(2019/2020)">Dashboard</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <div id="clockbox"></div>
+
+            
+
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <!-- your content here -->
+          <div class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- 1 card pump -------------------------------------------------------------------->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                      <div class="card-icon">
+                        <div class="tint">
+                          <i class="fas fa-tint"></i>
+                        </div>
+                      </div>
+                      <p class="card-category">Pump</p>
+
+                      <h4 class="switch">PUMP</h4>
+                      <input type="checkbox" id="onoff12" class="onoff">
+                      <label for="onoff12"></label>
+
+                      <p style="text-align:right">Manual OFF</p>
+                      <p style="text-align:right">ON</p>
+
+
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+                      <!-- Compiled and minified JavaScript -->
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+
+                    </div>
+                    <div class="card-footer">
+                      <div class="stats">
+                        <input type="checkbox" id="onoff1" class="onoff">
+                        <label for="onoff1"></label>
+                        <p style="text-align:right">ON</p>
+                        <p style="text-align:right">OFF</p>
+
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+                        <!-- Compiled and minified JavaScript -->
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- -------------------------------------------------------------------------->
+                <!-- 2 card fun -------------------------------------------------------------------->
+                <div class="col-lg-3 col-md-6 col-sm-6" style="position:absolute;left:400px" ;>
+                  <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                      <div class="card-icon">
+                        <div class="fan">
+                          <i class="fas fa-fan"></i>
+                        </div>
+                      </div>
+                      <p class="card-category">fan</p>
+                      <h4 class="switch">Fan</h4>
+
+                    </div>
+                    <div class="card-footer">
+                      <div class="stats">
+                        <input type="checkbox" id="onoff2" class="onoff">
+                        <label for="onoff2"></label>
+                        <p>ON</p>
+                        <p>OFF</p>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+                        <!-- Compiled and minified JavaScript -->
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                       
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ------------------------------------------------------------------------>
+                <!-- 3 card Light -------------------------------------------------------------------->
+                <div class="col-lg-3 col-md-6 col-sm-6" style="position:absolute;left:760px" ;>
+                  <div class="card card-stats">
+                    <div class="card-header card-header-info card-header-icon">
+                      <div class="card-icon">
+                        <div class="bulb">
+                          <i class="fas fa-lightbulb"></i>
+                        </div>
+                      </div>
+                      <p class="card-category">Light</p>
+                      <h4 class="switch">Light</h4>
+
+                    </div>
+                    <div class="card-footer">
+                      <div class="stats">
+                        <input type="checkbox" id="onoff3" class="onoff">
+                        <label for="onoff3"></label>
+
+                        <p>ON</p>
+                        <p>OFF</p>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+                        <!-- Compiled and minified JavaScript -->
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ------------------------------------------------------------------------>
+              </div>
+              <div class="row">
+                <!-- 1 card -------------------------------------------------------------------->
+                <div class="col-md-12 " style=" height:750px">
+                  <div class="card card-chart" style=" height:660px">
+                    <div class="card-header card-header-success" style=" height:550px">
+                      <div id="myPlot"></div>
+
+
+                    </div>
+                    <div class="card-body">
+                      <h4 class="card-title">Temperature Live</h4>
+                      <p class="card-category">
+                        <span class="text-success"><i class="fa fa-thermometer" style="font-size:24px"></i> DHT11 </span> Reading Temperature and Humidity</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="stats">
+                        <i class="material-icons">access_time</i> updated 1 minutes ago
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-------------------------------------------------------------------------->
+                <!-- 2 card Light -------------------------------------------------------------------->
+                <div class="col-md-12">
+                  <div class="card card-chart">
+                    <div class="card-header card-header-warning">
+                      <div id="myPlothum"></div>
+                    </div>
+                    <div class="card-body">
+                      <h4 class="card-title">Humidity Live</h4>
+                      <p class="card-category">
+                        <span class="text-success"><i class="fa fa-thermometer" style="font-size:24px"></i> DHT11 </span> Reading Temperature and Humidity</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="stats">
+                        <i class="material-icons">access_time</i> updated 1 minutes ago
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-------------------------------------------------------------------------->
+
+                <!-------------------------------------------------------------------------->
+              </div>
+
+
+            </div>
+            <div>
+            </div>
+          </div>
+          <footer class="footer">
+            <div class="container-fluid">
+
+              <div class="copyright float-right">
+                &copy;
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>, made with <i class="material-icons">favorite</i> by
+                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web <a>and Modified by students of University Tiaret </a>
+              </div>
+              <!-- your footer here -->
+            </div>
+          </footer>
+        </div>
+      </div>
+      <script src="script.js"></script>
+	  <script type="text/javascript">
+              var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+              var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+              function GetClock() {
+                var d = new Date();
+                var nday = d.getDay(),
+                  nmonth = d.getMonth(),
+                  ndate = d.getDate(),
+                  nyear = d.getFullYear();
+                var nhour = d.getHours(),
+                  nmin = d.getMinutes(),
+                  nsec = d.getSeconds(),
+                  ap;
+
+                if (nhour == 0) {
+                  ap = " AM";
+                  nhour = 12;
+                } else if (nhour < 12) {
+                  ap = " AM";
+                } else if (nhour == 12) {
+                  ap = " PM";
+                } else if (nhour > 12) {
+                  ap = " PM";
+                  nhour -= 12;
+                }
+
+                if (nmin <= 9) nmin = "0" + nmin;
+                if (nsec <= 9) nsec = "0" + nsec;
+
+                var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+                document.getElementById('clockbox').innerHTML = clocktext;
+              }
+
+              GetClock();
+              setInterval(GetClock, 1000);
+            </script>
+	                       <script>
+                     $(document).ready(function () {
+	const checkState = localStorage.getItem('onoff12'); // Get checkbox state from localStorage
+	if (checkState != null) {
+		$("#onoff12").prop('checked', true); // update checkbox to checked if checkbox checked 
+	}
+	$("#onoff12").on('change', function () { // Checkbox change event 
+		if ($(this).is(':checked')) { // check checkbox checked 
+			localStorage.setItem('onoff12', 'checked'); // add localStorage 
+			var data = "1";
+			var database = firebase.database();
+			var ref = database.ref("SManual");
+			ref.set(data);
+
+		} else {
+			localStorage.removeItem('onoff12'); // remove localStorage
+			var data = "0";
+			var database = firebase.database();
+			var ref = database.ref("SManual");
+			ref.set(data);
+		}
+	});
+});
+                      </script>
+					      <script>
+						  
+						                      $(document).ready(function () {
+	const checkState = localStorage.getItem('onoff1'); // Get checkbox state from localStorage
+	if (checkState != null) {
+		$("#onoff1").prop('checked', true); // update checkbox to checked if checkbox checked 
+	}
+	$("#onoff1").on('change', function () { // Checkbox change event 
+		if ($(this).is(':checked')) { // check checkbox checked 
+			localStorage.setItem('onoff1', 'checked'); // add localStorage 
+			var data = "1";
+			var database = firebase.database();
+			var ref = database.ref("site/spump");
+			ref.set(data);
+
+		} else {
+			localStorage.removeItem('onoff1'); // remove localStorage
+			var data = "0";
+			var database = firebase.database();
+			var ref = database.ref("site/spump");
+			ref.set(data);
+		}
+	});
+});
+						 
+                        </script>
+						 <script>
+                        					                      $(document).ready(function () {
+	const checkState = localStorage.getItem('onoff2'); // Get checkbox state from localStorage
+	if (checkState != null) {
+		$("#onoff2").prop('checked', true); // update checkbox to checked if checkbox checked 
+	}
+	$("#onoff2").on('change', function () { // Checkbox change event 
+		if ($(this).is(':checked')) { // check checkbox checked 
+			localStorage.setItem('onoff2', 'checked'); // add localStorage 
+			var data = "1";
+			var database = firebase.database();
+			var ref = database.ref("site/sfun");
+			ref.set(data);
+
+		} else {
+			localStorage.removeItem('onoff2'); // remove localStorage
+			var data = "0";
+			var database = firebase.database();
+			var ref = database.ref("site/sfun");
+			ref.set(data);
+		}
+	});
+});
+
+                        </script>
+						  <script>
+                                             					                      $(document).ready(function () {
+	const checkState = localStorage.getItem('onoff3'); // Get checkbox state from localStorage
+	if (checkState != null) {
+		$("#onoff3").prop('checked', true); // update checkbox to checked if checkbox checked 
+	}
+	$("#onoff3").on('change', function () { // Checkbox change event 
+		if ($(this).is(':checked')) { // check checkbox checked 
+			localStorage.setItem('onoff3', 'checked'); // add localStorage 
+			var data = "1";
+			var database = firebase.database();
+			var ref = database.ref("site/slight");
+			ref.set(data);
+
+		} else {
+			localStorage.removeItem('onoff3'); // remove localStorage
+			var data = "0";
+			var database = firebase.database();
+			var ref = database.ref("site/slight");
+			ref.set(data);
+		}
+	});
+});
+
+                        </script>
+</body>
+
+</html>

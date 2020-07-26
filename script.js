@@ -1,13 +1,13 @@
 // REPLACE <...> BY YOUR FIREBASE PROJECT CONFIGURATION:
 const   firebaseConfig = {
-    apiKey: "AIzaSyBM_gyn0qKW7Wmyiqb0Zo7c9li5EnnvGfE",
-    authDomain: "iot-green-house.firebaseapp.com",
-    databaseURL: "https://iot-green-house.firebaseio.com",
-    projectId: "iot-green-house",
-    storageBucket: "iot-green-house.appspot.com",
-    messagingSenderId: "427046450456",
-    appId: "1:427046450456:web:bce173703bb0241c9a1a6d",
-    measurementId: "G-TP2RCHRRVD"
+    apiKey: "-----YOURS-----------------",
+    authDomain: "-----YOURS-----------------",
+    databaseURL: "-----YOURS-----------------",
+    projectId: "-----YOURS-----------------",
+    storageBucket: "-----YOURS-----------------",
+    messagingSenderId: "-----YOURS-----------------",
+    appId: "-----YOURS-----------------",
+    measurementId: "-----YOURS-----------------"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);

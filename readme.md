@@ -74,6 +74,7 @@ At present, we officially aim to support the last two versions of the following 
 
 
 ## Resources
+- Special thanks to Mr.Libin Prasanth
 -  Get started with Firebase Hosting [https://firebase.google.com/docs/hosting/quickstart](https://firebase.google.com/docs/hosting/quickstart)
 -   Get started with IOT
 [https://medium.com/@o.lourme/our-iot-journey-through-esp8266-firebase-angular-and-plotly-js-part-3-644048e90ca4](https://medium.com/@o.lourme/our-iot-journey-through-esp8266-firebase-angular-and-plotly-js-part-3-644048e90ca4)
